@@ -1,3 +1,8 @@
+<script>
+    export let nickname;
+    export let name;
+</script>
+
 <style>
     .Profile-content {
         display: flex;
@@ -29,8 +34,8 @@
             <img src="https://res.cloudinary.com/trendingperu/image/upload/v1599406762/cursos/svelte/0_iwz28w.jpg" alt="">
         </div>
         <div class="Profile-info">
-            <h2>Chrod</h2>
-            <span>Pierre Chavez</span>
+            <h2>{nickname}</h2>
+            <span>{name}</span>
         </div>
     </div>
 </div>
