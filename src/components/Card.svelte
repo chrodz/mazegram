@@ -159,7 +159,7 @@
             </div>
         </div>
         <div class="Card-photo">
-            <figure>
+            <figure on:dblclick={handleLike}>
                 <img src="{photo}" alt="{username}">
             </figure>
         </div>
