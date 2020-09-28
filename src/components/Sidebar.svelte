@@ -5,6 +5,7 @@
 
     export let nickname;
     export let name;
+    export let name_last;
 </script>
 
 <style>
@@ -19,7 +20,7 @@
 
 <div class="Sidebar">
     <div class="Sidebar-container">
-        <Profile {nickname} {name} />
+        <Profile {nickname} {name} {name_last} />
         <Stories />
         <Footer />
     </div>

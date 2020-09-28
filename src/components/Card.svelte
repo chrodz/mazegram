@@ -5,6 +5,8 @@
 
     import { blur } from 'svelte/transition';
 
+    import { likeCount } from '../store/store';
+
     export let username;
     export let location;
     export let photo;
@@ -21,6 +23,11 @@
     }
     function handleLike(){
         like = !like;
+        if(like){
+            likeCount.update(n => n + 1);
+        }else{
+            likeCount.update(n => n - 1);
+        }
     }
 </script>
 
@@ -173,9 +180,7 @@
             <div class="Card-icons-second">
                 <i class="fas fa-bookmark"
                    class:active-bookmark={bookmark}
-                   on:click={() => {
-                       bookmark = !bookmark
-                   }}
+                   on:click={() => (bookmark = !bookmark)}
                 />
             </div>
         </div>

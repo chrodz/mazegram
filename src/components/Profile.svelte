@@ -1,6 +1,7 @@
 <script>
     export let nickname;
     export let name;
+    export let name_last;
 </script>
 
 <style>
@@ -35,7 +36,7 @@
         </div>
         <div class="Profile-info">
             <h2>{nickname}</h2>
-            <span>{name}</span>
+            <span>{name} {name_last}</span>
         </div>
     </div>
 </div>

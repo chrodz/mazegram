@@ -7,11 +7,18 @@
     import TimeLine from '../components/TimeLine.svelte';
 
     let data = {};
+    let data2 = {};
     const API = "https://us-central1-pugstagram-co.cloudfunctions.net/data";
+    const API2 = "http://nivelarroba.test/test";
 
     onMount( async () => {
         const response = await fetch(API);
         data = await response.json();
+
+        const response2 = await fetch(API2);
+        data2 = await response2.json();
+
+        console.log(data2);
     })
 </script>
 
@@ -36,5 +43,5 @@
 <Header />
 <Main>
     <TimeLine posts="{data.posts}" />
-    <Sidebar {...data.user} />
+    <Sidebar {...data.user} {...data2} />
 </Main>
